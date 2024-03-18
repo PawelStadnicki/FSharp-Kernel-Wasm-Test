@@ -1,0 +1,25 @@
+﻿@page "/server"
+@attribute [StreamRendering]
+@rendermode InteractiveServer
+<PageTitle>Server</PageTitle>
+
+<h1>Server mode</h1>
+<p role="status">Current count: @currentCount</p>
+<button class="btn btn-primary" @onclick="Increment">Increment</button>
+<button class="btn btn-primary" @onclick="TestInteractive">Test .NET interactive</button>
+<div>Response: @response</div>
+@code {
+    private int currentCount = 0;
+    private string response = "";
+
+    private async Task TestInteractive()
+    {
+        Console.WriteLine($"editor value: started");
+        response = await Blazor.Interactive.Test.run(currentCount);
+    }
+
+    private void Increment()
+    {
+        currentCount++;
+    }
+}
