@@ -3,7 +3,7 @@
 This is for .NET 9 Preview-2 (SDK, ASP runtime, and VS 17.10.0 Preview 2.0 are needed), where real multithreading is planned for wasm (tentative).
 The work just started and probably will not be ready until later previews (if at all), but I need this feature and want to catch problems as soon as possible.
 
-Speaking shortly, real multithreading should work in .NET as the proper native code that supports it is already there. The work for the .NET team is to enable it via some configuration, make it backward compatible, and make it work with JS interop, which currently is single-threaded. Many challenges appeared that moved it to tentative in .NET 9 but sooner or later, it will be available ( I hope with .NET 9). 
+Speaking shortly, real multithreading should work in .NET wasm as the proper native code that supports it is already there. The work for the .NET team is to enable it via some configuration, make it backward compatible, and make it work with JS interop, which currently is single-threaded. Many challenges appeared that moved it to tentative in .NET 9 but sooner or later, it will be available ( I hope with .NET 9). 
 
 ## About the sample app
 
